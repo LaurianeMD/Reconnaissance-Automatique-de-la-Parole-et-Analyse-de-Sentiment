@@ -33,10 +33,10 @@ Convertir l'audio en texte et prédire le sentiment :
 
 Exécutez le script predict_from_audio.py pour transcrire l'audio et prédire le sentiment :
 
-''
+```
 python predict_from_audio.py
 Modifier les fichiers audio :
-''
+```
 Vous pouvez remplacer le fichier audio_1.wav par n'importe quel autre fichier audio que vous souhaitez analyser. Assurez-vous que le chemin du fichier est correctement défini dans le script predict_from_audio.py.
 
 # Structure du Projet
