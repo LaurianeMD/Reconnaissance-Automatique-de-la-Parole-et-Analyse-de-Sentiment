@@ -1,4 +1,7 @@
 transformers 
-torchaudio 
-torch
+torchaudio ==0.12.1
+torch ==1.12.1
 pandas
+huggingsound
+streamlit
+

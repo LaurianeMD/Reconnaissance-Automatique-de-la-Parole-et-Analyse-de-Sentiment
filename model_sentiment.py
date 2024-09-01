@@ -1,19 +1,19 @@
 import torch
 from torch.utils.data import Dataset, DataLoader
-from transformers import BertTokenizer, BertForSequenceClassification
+from transformers import DistilBertTokenizer, DistilBertForSequenceClassification
 import pandas as pd
 from tqdm import tqdm
 import logging
 
 # Charger les données
-train_df = pd.read_csv("Dataset/train.csv")  # Vérifiez les chemins des fichiers
+train_df = pd.read_csv("Dataset/train.csv")  # Assurez-vous que les chemins de fichiers sont corrects
 val_df = pd.read_csv("Dataset/valid.csv")
 test_df = pd.read_csv("Dataset/test.csv")
 
-# Initialiser le tokenizer BERT
-tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
+# Utiliser le tokenizer de DistilBERT
+tokenizer = DistilBertTokenizer.from_pretrained('distilbert-base-uncased')
 
-# Définir un Dataset personnalisé
+# Créer un Dataset personnalisé
 class CustomDataset(Dataset):
     def __init__(self, df):
         self.texts = df['review'].tolist()
@@ -41,23 +41,20 @@ test_loader = DataLoader(test_dataset, batch_size=16)
 # Configurer le niveau de journalisation
 logging.basicConfig(level=logging.INFO)  # Changez à DEBUG pour plus de détails
 
-# Initialiser le modèle, l'optimiseur et la fonction de perte
+# Initialisation des composants avec DistilBERT
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-model = BertForSequenceClassification.from_pretrained('bert-base-uncased', num_labels=2)
+model = DistilBertForSequenceClassification.from_pretrained('distilbert-base-uncased', num_labels=2)
 model.to(device)
 optimizer = torch.optim.AdamW(model.parameters(), lr=5e-5)
 criterion = torch.nn.CrossEntropyLoss()
 
-# Fonction d'entraînement
+# Fonction d'entraînement et d'évaluation restent les mêmes
 def train(model, dataloader, optimizer, criterion):
     model.train()
     total_loss = 0
     correct = 0
     total = 0
     for batch in tqdm(dataloader):
-        # Désactiver les affichages détaillés
-        logging.debug(f"Batch structure: {batch}")  # Cette ligne sera ignorée sauf si le niveau est DEBUG
-        
         # Extraire les données correctement
         inputs = batch[0]
         labels = batch[1]
@@ -83,7 +80,6 @@ def train(model, dataloader, optimizer, criterion):
     accuracy = correct / total
     return total_loss / len(dataloader), accuracy
 
-# Fonction d'évaluation
 def evaluate(model, dataloader, criterion):
     model.eval()
     total_loss = 0
@@ -122,4 +118,4 @@ test_loss, test_acc = evaluate(model, test_loader, criterion)
 print(f'Test Loss: {test_loss:.4f}, Test Acc: {test_acc:.4f}')
 
 # Sauvegarder le modèle
-torch.save(model.state_dict(), 'bert_sentiment_model.pth')
+torch.save(model.state_dict(), 'distilbert_sentiment_model.pth')
