@@ -1,9 +1,4 @@
 # Reconnaissance-Automatique-de-la-Parole-et-Analyse-de-Sentiment
-L'objectif de ce projet est d’utiliser le modèle en inférence pour convertir des enregistrements audio en texte ensuite de prédire le sentiment. 
-model à télécharger: https://drive.google.com/file/d/1p0Mxrof1xCehG7C3AQbKrR_qLBzOtk2N/view?usp=sharing
-
-
-# Reconnaissance-Automatique-de-la-Parole-et-Analyse-de-Sentiment
 Ce projet a pour objectif de convertir des enregistrements audio en texte à l'aide d'un modèle de reconnaissance automatique de la parole (ASR) et de prédire le sentiment exprimé dans le texte transcrit.
 
 # Fonctionnalités
@@ -30,7 +25,7 @@ cd Reconnaissance-Automatique-de-la-Parole-et-Analyse-de-Sentiment
 pip install -r requirements.txt
 ```
 # Modèle pré-entraîné
-Téléchargez le modèle pré-entraîné DistilBERT pour l'analyse de sentiment à partir de ce lien: (Télécharger le modèle)[https://drive.google.com/file/d/1p0Mxrof1xCehG7C3AQbKrR_qLBzOtk2N/view?usp=sharing]
+Téléchargez le modèle pré-entraîné DistilBERT pour l'analyse de sentiment à partir de ce lien: https://drive.google.com/file/d/1p0Mxrof1xCehG7C3AQbKrR_qLBzOtk2N/view?usp=sharing
 Ensuite, placez le fichier téléchargé dans le répertoire racine du projet.
 
 # Utilisation
