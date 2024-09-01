@@ -44,6 +44,7 @@ Vous pouvez remplacer le fichier audio_1.wav par n'importe quel autre fichier au
 **model_sentiment.py** : Script d'entraînement du modèle de classification de sentiment à partir de texte.
 **save_model.py** : Script pour sauvegarder le modèle entraîné.
 **requirements.txt** : Liste des dépendances nécessaires pour exécuter le projet.
+**model_sentiment.py**: Script d'entraînement du modèle de classification de sentiment à partir du dataset https://www.kaggle.com/datasets/djilax/allocine-french-movie-reviews .
 
 # Auteurs
 Lauriane MBAGDJE DORENAN
