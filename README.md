@@ -30,7 +30,7 @@ cd Reconnaissance-Automatique-de-la-Parole-et-Analyse-de-Sentiment
 pip install -r requirements.txt
 ```
 # Modèle pré-entraîné
-Téléchargez le modèle pré-entraîné DistilBERT pour l'analyse de sentiment à partir de ce lien: (Télécharger le modèle)['https://drive.google.com/file/d/1p0Mxrof1xCehG7C3AQbKrR_qLBzOtk2N/view?usp=sharing']
+Téléchargez le modèle pré-entraîné DistilBERT pour l'analyse de sentiment à partir de ce lien: (Télécharger le modèle)[https://drive.google.com/file/d/1p0Mxrof1xCehG7C3AQbKrR_qLBzOtk2N/view?usp=sharing]
 Ensuite, placez le fichier téléchargé dans le répertoire racine du projet.
 
 # Utilisation
