@@ -2,18 +2,18 @@
 Ce projet a pour objectif de convertir des enregistrements audio en texte à l'aide d'un modèle de reconnaissance automatique de la parole (ASR) et de prédire le sentiment exprimé dans le texte transcrit.
 
 # Modèles Utilisés
-Modèle de Reconnaissance Automatique de la Parole (ASR)
+**Modèle de Reconnaissance Automatique de la Parole (ASR)**
 
-**Nom du modèle* : wav2vec2-large-xlsr-53-french
-**Description*: Ce modèle, fourni par huggingsound, est utilisé pour la transcription de fichiers audio en texte. Il est spécialement conçu pour les langues françaises.
+*Nom du modèle* : wav2vec2-large-xlsr-53-french
+*Description*: Ce modèle, fourni par huggingsound, est utilisé pour la transcription de fichiers audio en texte. Il est spécialement conçu pour les langues françaises.
 
-Modèle d'Analyse de Sentiment
+**Modèle d'Analyse de Sentiment**
 
-**Nom du modèle* : distilbert-base-uncased
-**Description* : Ce modèle est une version allégée de BERT (DistilBERT) utilisée pour la classification des **sentiments*: Le modèle a été fine-tuné sur un ensemble de données spécifique pour cette tâche.
-**Performance* :
-Accuracy : 0,94
-Loss : 0,16
+*Nom du modèle* : distilbert-base-uncased
+*Description* : Ce modèle est une version allégée de BERT (DistilBERT) utilisée pour la classification des *sentiments*: Le modèle a été fine-tuné sur un ensemble de données spécifique pour cette tâche.
+*Performance* :
+**Accuracy : 0,94**
+**Loss : 0,16**
 
 
 # Fonctionnalités
